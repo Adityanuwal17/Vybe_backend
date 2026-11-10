@@ -1,0 +1,21 @@
+{
+  "name": "vybe_backend",
+  "version": "1.0.0",
+  "description": "This is the backend for Vybe. A tinder like project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "javascript",
+    "mongo"
+  ],
+  "author": "Aditya Nuwal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
