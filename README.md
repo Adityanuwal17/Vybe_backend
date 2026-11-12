@@ -64,3 +64,32 @@ res.send("3rd response");
 - create post /signup Api to add data to database
 - push documents using API calls with postmane
 - error handling using try cathc
+
+- middleware to convert the data from request to js object and put it in body
+  app.use(express.json());
+
+- make your signup API dynamic to receive data from the end user
+
+# schema Validations and Data sanitization
+
+- add required, uniques, trim, min, minLength, trim
+- add default
+- create custum validate function for gender
+- imporve the DB scehma - PUT all appropraite validation on each feild in schema
+- add timestamps to the User Schema
+
+- add api level validation on Patch and sign up post api
+- Add Api validations for each field
+
+# validator package from npm for easier validations
+
+- validate data with helper functions for sign up
+
+# Bcrypt library from npm to encrypt passwords
+
+- create a password hash using bscrypt.hash
+- save the user with encrypted password
+
+- create login api
+- use bcrypt.compare to compare password and throw error if anything invalid
+- never reveal more information to the user
