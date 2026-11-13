@@ -93,3 +93,15 @@ res.send("3rd response");
 - create login api
 - use bcrypt.compare to compare password and throw error if anything invalid
 - never reveal more information to the user
+
+# Jwt tokens, authentication, cookie parse
+
+- install cookie-parser and jsonwebtoken
+- send a dummy cookie to user when login
+- create a get /profile api and check if you get the cookie back
+- In login api, after email password validation, create a jwt token and send it user in cookie
+- read the cookie inside the profile api and find the logged in user
+
+- write the user auth middleware
+- add the user auth middleware in profile api and a new send connection request api
+- set the expiry of jwt token and cookies
