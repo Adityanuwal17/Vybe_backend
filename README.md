@@ -125,15 +125,13 @@ res.send("3rd response");
 
 ## connectionRequestRouter:
 
-- POST /request/send/interested/:userId
-- POST /request/send/ignored/:userId
-- POST /request/review/accepted/:requestId
-- POST /request/review/rejected/:requestId
+- POST /request/send/status:/:userId
+- POST /request/review/:status/:requestId
 
 ## userRouter:
 
-- GET /user/connections
-- GET /user/requests/
+- GET /user/requests/matches
+- GET /user/requests/received
 - GET /user/feed -> gets you the profiles of other users on the platform
 
 - Using Express.Router()
@@ -155,3 +153,25 @@ res.send("3rd response");
 - \*checkout Logical quesries in mongoDB\*
 - schema.pre("save") function
 - compound indexing in connection request schema
+
+- Create POST API for /request/review/:status/:requestId with Validations
+
+# POST APIs vs GET APIs Thought Process:
+
+## POST :
+
+- attcker can put some malicious data in the data
+- protect the DB
+- validate every piece of information coming in api then only save in the DB
+
+## GET :
+
+- We have to make sure that we are sending only allowed data
+- should 100% sure that the user is authorized
+
+- create User Router
+- create GET /user/requests/received Api
+- Use ref and populate to send the info of the users for the requests received for the logged in User
+- read about ref and populate in mongoose
+
+- create GET /user/requests/matches API
