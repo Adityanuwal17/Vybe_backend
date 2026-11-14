@@ -145,3 +145,13 @@ res.send("3rd response");
 - Create PATCH /profile/edit
 - Create PATCH /profile/password API => forgot password API
 - \*make your sure to validate all data in every POST, PATCH requests\*
+
+- Read more about indexes in mongoose, mongoDB and advantages and disadvantages
+
+- create Connection Request Schema
+- send connection Request API
+- validation of data and think aboout all corner cases
+- Use of $or and $and queries in mongoose
+- \*checkout Logical quesries in mongoDB\*
+- schema.pre("save") function
+- compound indexing in connection request schema
