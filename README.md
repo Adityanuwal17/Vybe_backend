@@ -106,4 +106,37 @@ res.send("3rd response");
 - add the user auth middleware in profile api and a new send connection request api
 - set the expiry of jwt token and cookies
 
--
+- refactoring code using mongoose schema and set the jwt token there
+- also do it for validating password
+
+# Vybe APIs:
+
+## authRouter:
+
+- POST /signup
+- POST /login
+- POST /logout
+
+## profileRouter:
+
+- GET /profile/view
+- PATCH /profile/edit
+- PATCH /profile/password
+
+## connectionRequestRouter:
+
+- POST /request/send/interested/:userId
+- POST /request/send/ignored/:userId
+- POST /request/review/accepted/:requestId
+- POST /request/review/rejected/:requestId
+
+## userRouter:
+
+- GET /user/connections
+- GET /user/requests/
+- GET /user/feed -> gets you the profiles of other users on the platform
+
+- Using Express.Router()
+- create routes folder for managing auth, profile, request routers
+- create authRouter, profileRouter, requestRouter
+- import these routers in app.js
