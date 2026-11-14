@@ -80,7 +80,6 @@ userSchema.methods.getJWT = async function () {
   const token = await jwt.sign({ _id: user._id }, "Vybe@9009", {
     expiresIn: "1d",
   });
-  console.log(token);
   return token;
 };
 

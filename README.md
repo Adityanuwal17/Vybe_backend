@@ -121,7 +121,7 @@ res.send("3rd response");
 
 - GET /profile/view
 - PATCH /profile/edit
-- PATCH /profile/password
+- PATCH /profile/password :- Forgot password API
 
 ## connectionRequestRouter:
 
@@ -140,3 +140,8 @@ res.send("3rd response");
 - create routes folder for managing auth, profile, request routers
 - create authRouter, profileRouter, requestRouter
 - import these routers in app.js
+
+- create POST /logout API
+- Create PATCH /profile/edit
+- Create PATCH /profile/password API => forgot password API
+- \*make your sure to validate all data in every POST, PATCH requests\*
