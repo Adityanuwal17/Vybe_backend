@@ -189,3 +189,23 @@ res.send("3rd response");
 - push all the toUserId and fromUserIds into a set,
 - repeated ids will be taken care of in set
 - fetch all the users except the ones in the set as they are not to be shown
+
+- Explore Mongo DB logical query operators , $nin, $and, $or, $ne etc...
+
+# Pagination
+
+/feed?page=1&limit=10 => first 10 users, users 1-10
+
+/feed?page=2&limit=10 => 11-20
+
+/feed?page=3&limit=10 => 21-30
+
+In mongoDB, two functions:
+
+.skip(0) & .limit(10) => users 1-10
+
+.skip(10) & .limit(10) => users 11-20
+
+.skip(20) & .limit(10) => users 21-30
+
+skip = (page-1) \* limit
