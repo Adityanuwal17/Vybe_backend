@@ -175,3 +175,17 @@ res.send("3rd response");
 - read about ref and populate in mongoose
 
 - create GET /user/requests/matches API
+
+# Feed Api:
+
+## User should not see:
+
+- his own card
+- his matches
+- already ignored people
+- already send the connection request
+
+- find all the connection requests ( send + recieved + accepted rejected)
+- push all the toUserId and fromUserIds into a set,
+- repeated ids will be taken care of in set
+- fetch all the users except the ones in the set as they are not to be shown
