@@ -22,7 +22,7 @@ userRouter.get("/user/requests/received", userAuth, async (req, res) => {
   }
 });
 
-userRouter.get("/user/requests/matches", userAuth, async (req, res) => {
+userRouter.get("/user/matches", userAuth, async (req, res) => {
   try {
     const loggedInUser = req.user;
     const matches = await ConnectionRequest.find({

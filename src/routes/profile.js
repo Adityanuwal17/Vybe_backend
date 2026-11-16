@@ -8,9 +8,9 @@ const validator = require("validator");
 profileRouter.get("/profile/view", userAuth, async (req, res) => {
   try {
     user = req.user;
-    res.send(user);
+    res.json(user);
   } catch (err) {
-    res.status(400).send("Error: " + err.message);
+    res.status(400).json({ message: err.message });
   }
 });
 
@@ -29,7 +29,7 @@ profileRouter.patch("/profile/edit", userAuth, async (req, res) => {
       data: loggedInUser,
     });
   } catch (err) {
-    res.status(400).send("Error: " + err.message);
+    res.status(400).json({ message: err.message });
   }
 });
 
